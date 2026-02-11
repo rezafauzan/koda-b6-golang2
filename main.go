@@ -12,24 +12,40 @@ type are struct {
 	are the
 }
 
-type world struct{
+type world struct {
 	world string
 }
 
-type academy struct{
+type academy struct {
 	academy string
 }
 
-type tech struct{
+type tech struct {
 	tech academy
 }
 
-type man struct{
+type man struct {
 	man [1]tech
 }
 
-type obj struct{
+type obj struct {
 	str [4][2][3]man
+}
+
+type is struct {
+	is string
+}
+
+type fruit struct {
+	fruit is
+}
+
+type favourite struct {
+	favourite [4]fruit
+}
+
+type my struct {
+	my [1]favourite
 }
 
 func main() {
@@ -45,19 +61,19 @@ func main() {
 		world: "Hello World",
 	}
 
-	var obj obj= obj{
-		str: [4][2][3] man{
+	var obj obj = obj{
+		str: [4][2][3]man{
 			{
-				{{},{},{}},{{},{},{}},
+				{{}, {}, {}}, {{}, {}, {}},
 			},
 			{
-				{{},{},{}},{{},{},{}},
+				{{}, {}, {}}, {{}, {}, {}},
 			},
 			{
-				{{},{},{}},{{},{},{}},
+				{{}, {}, {}}, {{}, {}, {}},
 			},
 			{
-				{{},{},{}},
+				{{}, {}, {}},
 				{
 					{},
 					{},
@@ -67,7 +83,23 @@ func main() {
 		},
 	}
 
+	var my [1]favourite = [1]favourite{
+		favourite{
+			favourite: [4]fruit{
+				{},
+				{},
+				{},
+				{
+					fruit: is{
+						is: "Apple",
+					}, 
+				},
+			},
+		},
+	}
+
 	fmt.Println(we.are.the.best)
 	fmt.Println(hello.world)
 	fmt.Println(obj.str[3][1][2].man[0].tech.academy)
+	fmt.Println(my[0].favourite[3].fruit.is)
 }
