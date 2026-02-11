@@ -11,17 +11,12 @@ type the struct {
 type are struct {
 	are the
 }
-type we struct {
-	we are
-}
 
 type world struct{
 	world string
 }
 
-type hello struct{
-	hello world
-}
+
 
 func main() {
 	var we are = are{
