@@ -2,119 +2,27 @@ package main
 
 import "fmt"
 
-type best struct {
-	best string
-}
-type the struct {
-	the best
-}
-type are struct {
-	are the
-}
-
-type world struct {
-	world string
-}
-
-type academy struct {
-	academy string
-}
-
-type tech struct {
-	tech academy
-}
-
-type man struct {
-	man [1]tech
-}
-
-type obj struct {
-	str [4][2][3]man
-}
-
-type is struct {
-	is string
-}
-
-type fruit struct {
-	fruit is
-}
-
-type favourite struct {
-	favourite [4]fruit
-}
-
-type my struct {
-	my [1]favourite
-}
-
-type num struct{
-	first [2]int
-	second [3]int
-}
-
 func main() {
-	var we are = are{
-		are: the{
-			the: best{
-				best: "Koda",
-			},
-		},
+	scores := []int{50, 75, 66, 20, 32, 90,}
+
+	index66 := 0
+	for x := range len(scores) {
+		if(scores[x] == 66){
+			index66 = x
+		}
 	}
 
-	var hello world = world{
-		world: "Hello World",
+	var newScores []int = []int{}
+	for y := range index66+1{
+		newScores = append(newScores, scores[y])
 	}
-
-	var obj obj = obj{
-		str: [4][2][3]man{
-			{
-				{{}, {}, {}}, {{}, {}, {}},
-			},
-			{
-				{{}, {}, {}}, {{}, {}, {}},
-			},
-			{
-				{{}, {}, {}}, {{}, {}, {}},
-			},
-			{
-				{{}, {}, {}},
-				{
-					{},
-					{},
-					man{[1]tech{{academy{academy: "Tech Academy"}}}},
-				},
-			},
-		},
+	newScores = append(newScores, 88)
+	
+	var restScores []int = scores[index66+1:]
+	for z := range len(restScores){
+		newScores = append(newScores, restScores[z])
 	}
-
-	var my [1]favourite = [1]favourite{
-		favourite{
-			favourite: [4]fruit{
-				{},
-				{},
-				{},
-				{
-					fruit: is{
-						is: "Apple",
-					}, 
-				},
-			},
-		},
+	for a := range len(newScores){
+		fmt.Printf("Scores pada index - %d %s \n", a, fmt.Sprintf("%d", newScores[a]))
 	}
-
-	var num num = num{
-		first: [2]int{
-			0,16,
-		},
-		second: [3]int{
-			0,0,16,
-		},
-	}
-
-	fmt.Println(we.are.the.best)
-	fmt.Println(hello.world)
-	fmt.Println(obj.str[3][1][2].man[0].tech.academy)
-	fmt.Println(my[0].favourite[3].fruit.is)
-	fmt.Printf("%s", fmt.Sprintf("%d",num.first[1] + num.second[2]))
 }
