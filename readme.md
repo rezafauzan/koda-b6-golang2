@@ -1,3 +1,12 @@
+# Golang App 2 Program
+## Practice Slice Partitioning
+    from initial slices scores := []int{50, 75, 66, 20, 32, 90,}
+    append int 88 after int 66
+    and then show all scores one by one using loop
+
+### Results Screenshoot
+![My code Results Output](assets/img/scores.png)
+
 ## Accessing Complex Struct and Array/Slice
 	we.are.the.best
 	hello.world
@@ -13,10 +22,10 @@
     Apple
     32
 
-## Code Screenshoot
+### Code Screenshoot
 ![My code](assets/img/screenshoot.png)
 
-## Results Screenshoot
+### Results Screenshoot
 ![My code Results Output](assets/img/result.png)
 
 ## Dependency
