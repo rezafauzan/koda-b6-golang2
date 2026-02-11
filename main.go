@@ -48,6 +48,11 @@ type my struct {
 	my [1]favourite
 }
 
+type num struct{
+	first [2]int
+	second [3]int
+}
+
 func main() {
 	var we are = are{
 		are: the{
@@ -98,8 +103,18 @@ func main() {
 		},
 	}
 
+	var num num = num{
+		first: [2]int{
+			0,16,
+		},
+		second: [3]int{
+			0,0,16,
+		},
+	}
+
 	fmt.Println(we.are.the.best)
 	fmt.Println(hello.world)
 	fmt.Println(obj.str[3][1][2].man[0].tech.academy)
 	fmt.Println(my[0].favourite[3].fruit.is)
+	fmt.Printf("%s", fmt.Sprintf("%d",num.first[1] + num.second[2]))
 }
