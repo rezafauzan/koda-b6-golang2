@@ -82,7 +82,7 @@ func main() {
 				{
 					{},
 					{},
-					man{[1]tech{tech{academy{academy: "Tech Academy"}}}},
+					man{[1]tech{{academy{academy: "Tech Academy"}}}},
 				},
 			},
 		},
