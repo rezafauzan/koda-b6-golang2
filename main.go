@@ -1,8 +1,10 @@
 package main
 
 import "fmt"
+import "koda-b6-golang2/slice"
 
 func main() {
+	slice.Slice()
 	scores := []int{50, 75, 20, 32, 90, 66,}
 	var newScores []int = []int{}
 

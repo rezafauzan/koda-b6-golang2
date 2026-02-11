@@ -1,4 +1,4 @@
-package main
+package slice
 
 import "fmt"
 
@@ -53,7 +53,7 @@ type num struct{
 	second [3]int
 }
 
-func slice() {
+func Slice() {
 	var we are = are{
 		are: the{
 			the: best{
@@ -116,5 +116,5 @@ func slice() {
 	fmt.Println(hello.world)
 	fmt.Println(obj.str[3][1][2].man[0].tech.academy)
 	fmt.Println(my[0].favourite[3].fruit.is)
-	fmt.Printf("%s", fmt.Sprintf("%d",num.first[1] + num.second[2]))
+	fmt.Printf("%s \n", fmt.Sprintf("%d",num.first[1] + num.second[2]))
 }
